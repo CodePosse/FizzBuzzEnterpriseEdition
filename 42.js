@@ -7,3 +7,17 @@ const fizzBuzz = (num) => {
     if (msg === '') msg = num;
     window.alert(msg);
 }
+
+
+// Legacy shorthand (efficient but not proper)
+if (!fizzBuzz) {
+    function fizzBuzz (num) {
+        var msg = '';
+        if (!(num % 3)) msg += 'Fizz';
+        if (!(num % 5)) msg += 'Buzz';
+        if (!msg) msg = num;
+        window.alert(msg);
+    }
+};
+
+fizzBuzz(15);
